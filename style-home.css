@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+    color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 全体の高さを画面の高さに合わせる */
+}
+
+header {
+    padding: 20px;
+    background-color: #444444;
+    text-align: center;
+}
+
+header img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a, .dropdown-toggle {
+    color: #F7F7F7;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444444;
+    width: 200px;
+    z-index: 1;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+.dropdown-menu a {
+    color: #F7F7F7;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555555;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* フッター以外の空間を埋める */
+    text-align: center;
+    background-color: #333333;
+}
+
+main img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px; /* サイズを固定 */
+    height: auto;
+    background-color: transparent; /* 背景を透明に設定 */
+    box-shadow: none; /* 影を完全に削除 */
+    border: none; /* 境界線を削除 */
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    color: #F7F7F7;
+    margin-bottom: 10px;
+}
+
+.main-content .release-info {
+    font-size: 1.2rem;
+    color: #CCCCCC;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #444444;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header img {
+        height: 40px;
+    }
+
+    nav a, .dropdown-toggle {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .dropdown-menu {
+        width: auto;
+        left: 0;
+        transform: none;
+    }
+
+    main img {
+        max-width: 100%;
+        max-height: 70%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
